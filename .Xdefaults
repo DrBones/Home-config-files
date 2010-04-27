@@ -1,0 +1,39 @@
+XTerm*background: #121212
+XTerm*foreground: grey
+XTerm*faceName: Dejavu Sans Mono
+XTerm*faceSize:8
+XTerm*boldFont: Dejavu Sans Mono:style=Book:size=8
+#XTerm*faceName: Dejavu Sans Mono:Bold
+#XTerm*font: -xos4-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+#XTerm*boldFont: -xos4-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+#XTerm*font: -*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
+#XTerm*boldFont: -*-fixed-medium-r-semicondensed-*-13-*-*-*-*-*-*-*
+#XTerm*alwaysBoldMode: false
+#XTerm*boldMode: false
+
+#XTerm*eightBitInput:   false
+XTerm*metaSendsEscape: true
+Xft.antialias: 1
+Xft.dpi: 105.8
+Xft.hinting: 1
+Xft.hintstyle: hintfull
+Xft.rgba: rgb
+URxvt.background: #121212
+URxvt.foreground: grey
+URxvt.font: xft:Dejavu Sans Mono:size=8
+#URxvt.font: xft:Dejavu Sans Mono:size=8:antialias=false
+#URxvt.font: x:-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+#URxvt.font: x:-xos4-terminus-medium-*-*-*-12-*-*-*-*-*-iso10646-1
+#URxvt.boldFont: x:-*-terminus-*-*-*-*-12-*-*-*-*-*-*-*
+URxvt.boldFont: xft:Dejavu Sans Mono:style=Book:size=8
+#URxvt.boldFont: xft:Dejavu Sans Mono:style=Book:size=8:antialias=false
+URxvt.saveLines: 512
+URxvt.scrollBar: false  
+URxvt.pointerBlank: true
+#URxvt.intensityStyles: false
+URxvt.underlineColor: yellow
+#Rxvt*backspacekey: 
+#URxvt.jumpScroll: false
+#URxvt.skipScroll: true
+#URxvt.buffered: false
+URxvt*color12: #5f5fff
