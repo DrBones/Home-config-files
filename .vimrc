@@ -317,13 +317,10 @@ nmap <F9>   :TrinityToggleSourceExplorer<CR>
 nmap <F10>  :TrinityToggleTagList<CR>
 
 " Open and close the NERD_tree.vim separately
-<<<<<<< HEAD
 nmap <F11>  :TrinityToggleNERDTree<CR>
 nmap ,n  :TrinityToggleNERDTree<CR>
-=======
 nmap <F11>  :TrinityToggleNERDTree<CR>
 nmap ,n  :TrinityToggleNERDTree<CR>
->>>>>>> 9222adbc6c2064bc4a45616901fea5bb1f0d5710
 
 " SnippetsEmu *****************************************************************
 "imap <unique> <C-j> <Plug>Jumper
