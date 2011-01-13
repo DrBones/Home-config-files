@@ -36,7 +36,11 @@ zmodload zsh/complist
 #zstyle ':completion:::::' completer _complete _approximate _prefix
 _force_rehash() {
   (( CURRENT == 1 )) && rehash
+<<<<<<< HEAD
   return 1  # Because we didn't really complete anything
+=======
+  return 1	# Because we didn't really complete anything
+>>>>>>> 9222adbc6c2064bc4a45616901fea5bb1f0d5710
 }
 zstyle ':completion:::::' completer _force_rehash _complete _approximate
 zstyle -e ':completion:*:approximate:*' max-errors 'reply=( $(( ($#PREFIX + $#SUFFIX) / 3 )) )'
@@ -75,7 +79,11 @@ export ECLIM_ECLIPSE_HOME=/usr/share/eclipse
 export PATH=$PATH:/home/janosh/bin:/opt/java/bin
 
 #-----------------------------#
+<<<<<<< HEAD
 #Aliases                      #
+=======
+#Aliases											#
+>>>>>>> 9222adbc6c2064bc4a45616901fea5bb1f0d5710
 #-----------------------------#
 alias ls="ls --color -F --group-directories-first"
 alias ll="ls --color -lh --group-directories-first"
@@ -187,7 +195,11 @@ zle -N zle-keymap-select
 #    local PWDSIZE=${#${(%):-%~}}
 #
 #    if [[ "$PROMPTSIZE + $PWDSIZE" -gt $TERMWIDTH ]]; then
+<<<<<<< HEAD
 # (( PR_PWDLEN = $TERMWIDTH - $PROMPTSIZE ))
+=======
+#	(( PR_PWDLEN = $TERMWIDTH - $PROMPTSIZE ))
+>>>>>>> 9222adbc6c2064bc4a45616901fea5bb1f0d5710
 #    fi
 
 
@@ -245,4 +257,7 @@ precmd () {
    print -rP '${PR_BOLD_RED}<${PR_RED}<${PR_BOLD_BLACK}<\
 ${PR_BOLD_WHITE} ${USRPROMPT}${PR_RED}! ${PR_BOLD_BLACK}%*${PR_BOLD_RED}\
 %(?.. E:%?)${PR_BOLD_BLUE}${PR_SCREEN}${PR_JOBS}${PR_BOLD_WHITE}'}
+<<<<<<< HEAD
 
+=======
+>>>>>>> 9222adbc6c2064bc4a45616901fea5bb1f0d5710

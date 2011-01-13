@@ -75,12 +75,20 @@ endfunction
 nmap <F4> :call ToggleSpell()<CR>
 imap <F4> <Esc>:call ToggleSpell()<CR>a
 " Navigation *****************************************************************
+<<<<<<< HEAD
 noremap <C-h> <C-W>h
 noremap <C-j> <C-W>j
 noremap <C-k> <C-W>k
 noremap <C-l> <C-W>l
 noremap ,l :bprevious!<CR>
 noremap ,; :bNext!<CR>
+=======
+map <Tab> 
+noremap <C-h> <C-W>h 
+noremap <C-j> <C-W>j 
+noremap <C-k> <C-W>k 
+noremap <C-l> <C-W>l 
+>>>>>>> 9222adbc6c2064bc4a45616901fea5bb1f0d5710
 
 "Press space to alternate between Unfold and Fold
 nnoremap <space> za
@@ -312,8 +320,13 @@ nmap <F9>   :TrinityToggleSourceExplorer<CR>
 nmap <F10>  :TrinityToggleTagList<CR>
 
 " Open and close the NERD_tree.vim separately
+<<<<<<< HEAD
 nmap <F11>  :TrinityToggleNERDTree<CR>
 nmap ,n  :TrinityToggleNERDTree<CR>
+=======
+nmap <F11>  :TrinityToggleNERDTree<CR> 
+nmap ,n  :TrinityToggleNERDTree<CR> 
+>>>>>>> 9222adbc6c2064bc4a45616901fea5bb1f0d5710
 
 " SnippetsEmu *****************************************************************
 "imap <unique> <C-j> <Plug>Jumper
