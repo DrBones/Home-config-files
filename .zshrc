@@ -5,22 +5,28 @@ SAVEHIST=2000
 KEYTIMEOUT=10
 setopt append_history autocd inc_append_history complete_in_word hist_ignore_all_dups
 bindkey -v
-bindkey -v '\e[3~' delete-char
-bindkey -v '\e[H' vi-beginning-of-line
-bindkey -v '\e[7~' vi-beginning-of-line
-bindkey -v '\e[F' vi-end-of-line
-bindkey -v '\e[8~' vi-end-of-line
-bindkey -v '^?' backward-delete-char
+#bindkey -v '\e[3~' delete-char
+#bindkey -v '\e[H' vi-beginning-of-line
+#bindkey -v '\e[7~' vi-beginning-of-line
+#bindkey -v '\e[F' vi-end-of-line
+#bindkey -v '\e[8~' vi-end-of-line
+bindkey  'OH' vi-beginning-of-line    # for gnome terminal
+bindkey -M vicmd '[1~' vi-beginning-of-line   # for gnome terminal
+bindkey  'OF' vi-end-of-line          # for gnome terminal
+bindkey -M vicmd '[4~' vi-end-of-line         # for gnome terminal
+bindkey -M vicmd '^?' backward-delete-char
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '^R' history-incremental-search-backward
-bindkey -M vicmd 'K' history-incremental-search-backward
+#bindkey -M vicmd 'K' history-incremental-search-backward
+bindkey -M viins '[A' up-line-or-history
+bindkey -M viins '[B' down-line-or-history
 bindkey -v '\e[Z' reverse-menu-complete
 bindkey -M viins '^E' push-input # not working
 bindkey -v '^Z' undo
 
 # End of lines configured by zsh-newuser-install
 # The following lines were added by compinstall
-zstyle :compinstall filename '/home/janosh/.zshrc'
+zstyle :compinstall filename '/home/jonas/.zshrc'
 MSG=/var/log/messages.log
 #------------------------
 # Autoloading Modules
@@ -70,9 +76,9 @@ export LESS_TERMCAP_se=$'\E[0m'           # end standout-mode
 export LESS_TERMCAP_so=$'\E[38;5;190m'    # begin standout-mode - info box
 export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
-#export TERM='xterm-256color'
+export TERM='xterm-256color'
 export ECLIM_ECLIPSE_HOME=/usr/share/eclipse
-export PATH=$PATH:/home/janosh/bin:/opt/java/bin
+export PATH=$PATH:~/bin:/opt/java/bin
 
 #-----------------------------#
 #Aliases											#
@@ -245,3 +251,4 @@ precmd () {
    print -rP '${PR_BOLD_RED}<${PR_RED}<${PR_BOLD_BLACK}<\
 ${PR_BOLD_WHITE} ${USRPROMPT}${PR_RED}! ${PR_BOLD_BLACK}%*${PR_BOLD_RED}\
 %(?.. E:%?)${PR_BOLD_BLUE}${PR_SCREEN}${PR_JOBS}${PR_BOLD_WHITE}'}
+
