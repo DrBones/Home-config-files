@@ -48,12 +48,12 @@ Bundle 'fs111/pydoc.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdtree'
 " vim-scripts repos
-Bundle 'pylint.vim'
+"Bundle 'pylint.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
 Bundle 'rails.vim'
 Bundle 'taglist.vim'
-"Bundle 'pyflakes.vim'
+Bundle 'pyflakes.vim'
 " Bundle 'PySmell'
 " non github repos
 Bundle 'git://git.wincent.com/command-t.git'
@@ -139,7 +139,7 @@ set undofile
 " Python: yes
 " C: yes
 
-au BufRead,BufNewFile *.py,*.pyw,*.c  autocmd CursorMoved * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
+"au BufRead,BufNewFile *.py,*.pyw,*.c  autocmd CursorMoved * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
 
 " Folding based on indentation:
 set foldmethod=indent
@@ -406,14 +406,14 @@ let Tlist_Compact_Format = 1
 " show Tlist menu in gVim
 let Tlist_Show_Menu = 1 
 
-"" --------- Pylint
-autocmd FileType python compiler pylint
-" Don't show quickfix window. Manually can be opened by :cope
-let g:pylint_cwindow = 1
-" Don't show style errors
-let g:pylint_conventions = 1
-" Check file 'on fly'
-let g:pylint_onfly = 1
+""" --------- Pylint
+"autocmd FileType python compiler pylint
+"" Don't show quickfix window. Manually can be opened by :cope
+"let g:pylint_cwindow = 0
+"" Don't show style errors
+"let g:pylint_conventions = 1
+"" Check file 'on fly'
+"let g:pylint_onfly = 1
 
 " -----------------------------------------------------------------------------  
 " |                              Plug-ins                                     |
@@ -424,6 +424,7 @@ noremap <silent> <F7> :NERDTreeToggle<CR>
 noremap <silent> <leader>n :NERDTreeToggle<CR>
 "" User instead of Netrw when doing an edit /foobar
 let NERDTreeHijackNetrw=1
+let NERDTreeWinPos='right'
 "
 "" Single click for everything
 "let NERDTreeMouseMode=1

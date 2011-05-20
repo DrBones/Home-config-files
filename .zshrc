@@ -78,7 +78,8 @@ export LESS_TERMCAP_ue=$'\E[0m'           # end underline
 export LESS_TERMCAP_us=$'\E[04;38;5;146m' # begin underline
 export TERM='xterm-256color'
 export ECLIM_ECLIPSE_HOME=/usr/share/eclipse
-export PATH=$PATH:~/bin:/opt/java/bin
+export PATH=$PATH:~/bin:/opt/java/bin:~/local/bin
+export PYTHONPATH=/home/jonas/local/lib/python2.7/site-packages
 
 #-----------------------------#
 #Aliases											#
