@@ -93,7 +93,7 @@ au BufRead,BufNewFile Makefile* set noexpandtab
 " Wrap text after a certain number of characters
 " Python: 120
 " C: 120
-au BufRead,BufNewFile *.py,*.pyw,*.c,*.h set textwidth=120
+"au BufRead,BufNewFile *.py,*.pyw,*.c,*.h set textwidth=120
 
 " Turn off settings in 'formatoptions' relating to comment formatting.
 " - c : do not automatically insert the comment leader when wrapping based on
@@ -342,12 +342,6 @@ set listchars=trail:.,tab:>-,eol:$
 set nolist
 :noremap ,i :set list!<CR> " Toggle invisible chars
 :noremap ,w :set wrap!<CR>  " Toggle Text wrapping
-
-" Mouse ***********************************************************************
-set mouse=a " Enable the mouse
-"behave xterm
-"set selectmode=mouse
-
 
 " Cursor Movement *************************************************************
 " Make cursor move by visual lines instead of file lines (when wrapping)
