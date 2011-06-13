@@ -94,6 +94,7 @@ alias publicip="curl -s checkip.dyndns.org|sed -e 's/.*Current IP Address: //' -
 alias mkvplayer="mplayer -lavdopts lowres=1:fast:skiploopfilter=all -vf scale=720:-2"
 alias vim="gvim -v"
 alias sim="sudo vim"
+alias cp="cp -i"
 # Set up auto extension stuff
 #BROWSER=firefox
 #EDITOR=vim

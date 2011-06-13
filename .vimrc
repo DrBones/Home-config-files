@@ -35,6 +35,7 @@ call vundle#rc()
 
 "Command T Esc Binding
 let g:CommandTCancelMap='<Esc>'
+let g:CommandTMaxHeight=10
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
@@ -47,10 +48,12 @@ Bundle 'tpope/vim-surround'
 Bundle 'fs111/pydoc.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'scrooloose/nerdtree'
+"Bundle 'fholgado/minibufexpl.vim'
 " vim-scripts repos
 "Bundle 'pylint.vim'
 Bundle 'L9'
 Bundle 'FuzzyFinder'
+Bundle 'buftabs'
 Bundle 'rails.vim'
 Bundle 'taglist.vim'
 Bundle 'pyflakes.vim'
@@ -217,8 +220,8 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
-noremap ,l :bprevious!<CR>
-noremap ,; :bNext!<CR>
+noremap <silent> <S-h> :bprevious!<CR>
+noremap <silent> <S-l> :bNext!<CR>
 :ca WQ wq
 :ca W w
 :ca X x
