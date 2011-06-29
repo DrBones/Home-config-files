@@ -15,6 +15,7 @@ bindkey -M vicmd '[1~' vi-beginning-of-line   # for gnome terminal
 bindkey  'OF' vi-end-of-line          # for gnome terminal
 bindkey -M vicmd '[4~' vi-end-of-line         # for gnome terminal
 bindkey -M vicmd '^?' backward-delete-char
+bindkey '^[[3~' delete-char # Del
 bindkey -M viins '^R' history-incremental-search-backward
 bindkey -M vicmd '^R' history-incremental-search-backward
 #bindkey -M vicmd 'K' history-incremental-search-backward
