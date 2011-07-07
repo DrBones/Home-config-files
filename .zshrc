@@ -97,6 +97,7 @@ alias vim="gvim -v"
 alias sim="sudo vim"
 alias cp="cp -i"
 alias ipython="ipython -nobanner"
+alias gits="git status"
 # Set up auto extension stuff
 #BROWSER=firefox
 #EDITOR=vim
