@@ -128,7 +128,7 @@ set encoding=utf-8
 set autoindent
 
 " Disable read-only protection
-set modifiable
+" set modifiable
 
 " Persistent undo
 set undodir=/tmp/
@@ -166,8 +166,8 @@ set lazyredraw
 let &cdpath=','.expand("$HOME")
 
 " Disable backup files
-set noswapfile
-set nobackup
+" set noswapfile
+" set nobackup
 
 " Set mouse mod
 set mouse=a
@@ -210,7 +210,7 @@ endfunction
 " Rope AutoComplete
 let ropevim_vim_completion = 1
 let ropevim_extended_complete = 1
-let g:ropevim_autoimport_modules = ["os.*","traceback","django.*","lxml.etree","lxml.*","numpy"]
+let g:ropevim_autoimport_modules = ["os.*","traceback","django.*","lxml.etree","lxml.*","scipy"]
 " imap <c-space> <C-R>=RopeCodeAssistInsertMode()<CR>
 
 nmap <F4> :call ToggleSpell()<CR>
