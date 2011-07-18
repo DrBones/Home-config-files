@@ -36,6 +36,9 @@ call vundle#rc()
 "Command T Esc Binding
 let g:CommandTCancelMap='<Esc>'
 let g:CommandTMaxHeight=10
+nmap <silent> <Leader>d :CommandT<CR>
+nmap <silent> <Leader>s :CommandTBuffer<CR>
+
 " original repos on github
 Bundle 'tpope/vim-fugitive'
 Bundle 'msanders/snipmate.vim'
@@ -220,8 +223,8 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-j> :wincmd j<CR>
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-l> :wincmd l<CR>
-noremap <silent> <S-h> :bprevious!<CR>
-noremap <silent> <S-l> :bNext!<CR>
+noremap <silent> <S-h> :bprevious<CR>
+noremap <silent> <S-l> :bnext<CR>
 :ca WQ wq
 :ca W w
 :ca X x
