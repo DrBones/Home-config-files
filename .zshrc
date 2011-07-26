@@ -96,8 +96,10 @@ alias mkvplayer="mplayer -lavdopts lowres=1:fast:skiploopfilter=all -vf scale=72
 alias vim="gvim -v"
 alias sim="sudo vim"
 alias cp="cp -i"
+alias rm="rm -r"
 alias ipython="ipython -nobanner"
 alias gits="git status"
+alias sudo='sudo '
 # Set up auto extension stuff
 #BROWSER=firefox
 #EDITOR=vim
