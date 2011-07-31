@@ -2,30 +2,9 @@
 " |                            VIM Settings                                   |
 " |                   (see gvimrc for gui vim settings)                       |
 " |                                                                           |
-" | Some highlights:                                                          |
-" |   jj = <esc>  Very useful for keeping your hands on the home row          |
-" |   ,n = toggle NERDTree off and on                                         |
-" |                                                                           |
-" |   ,f = fuzzy find all files                                               |
-" |   ,b = fuzzy find in all buffers                                          |
-" |                                                                           |
-" |   hh = inserts '=>'                                                       |
-" |   aa = inserts '@'                                                        |
-" |                                                                           |
-" |   ,h = new horizontal window                                              |
-" |   ,v = new vertical window                                                |
-" |                                                                           |
-" |   ,i = toggle invisibles                                                  |
-" |   ,w = toggle wrapping
-" |                                                                           |
-" |   enter and shift-enter = adds a new line after/before the current line   |
-" |                                                                           |
-" |   :call Tabstyle_tabs = set tab to real tabs                              |
-" |   :call Tabstyle_spaces = set tab to 2 spaces                             |
 " |                                                                           |
 " | Put machine/user specific settings in ~/.vimrc.local                      |
 " -----------------------------------------------------------------------------  
-
 
 set nocompatible
 filetype off
@@ -190,14 +169,17 @@ set winminheight=1
 " Wrap on these
 au BufRead,BufNewFile *.py,*.pyw,*.c,*.h set whichwrap+=<,>,[,]
 
-" Use the cool tab complete menu
-set wildmenu
-set wildignore=*.o,*~
-
 " If possible, try to use a narrow number column.
 setlocal numberwidth=4
-
 set fillchars=fold:-
+
+" Use the cool tab complete menu
+" Ignore certain filetypes in listings
+set wildmenu
+set wildignore+=*.o,*.obj,.git,*.vtr,*.vtu,*.vtk,*.bmp,*.aux,*.pdf,*.ps,*~
+
+" Set default filetype of tex documents to tex to ensure latex-suite is loaded
+let g:tex_flavor='latex'
 
 " Spellchecking, toggle using F4*********************************************
 
@@ -250,8 +232,6 @@ set si " smartindent	(local to buffer)
 "EOF
 
 "map <C-h> :py EvaluateCurrentRange()
-"Set minimal width of Number Column to the left
-set numberwidth=1
 
 
 " Windows *********************************************************************
@@ -337,8 +317,9 @@ set sessionoptions=blank,buffers,curdir,folds,help,resize,tabpages,winsize
 
 
 " Misc ************************************************************************
-set backspace=indent,eol,start
 set number " Show line numbers
+set numberwidth=1 "Set minimal width of Number Column to the left
+set backspace=indent,eol,start
 set matchpairs+=<:>
 set vb t_vb= " Turn off bell, this could be more annoying, but I'm not sure how
 
@@ -346,8 +327,8 @@ set vb t_vb= " Turn off bell, this could be more annoying, but I'm not sure how
 " Invisible characters  and Wrapping *******************************************
 set listchars=trail:.,tab:>-,eol:$
 set nolist
-:noremap ,i :set list!<CR> " Toggle invisible chars
-:noremap ,w :set wrap!<CR>  " Toggle Text wrapping
+noremap ,i :set list!<CR> " Toggle invisible chars
+noremap ,w :set wrap!<CR>  " Toggle Text wrapping
 
 " Cursor Movement *************************************************************
 " Make cursor move by visual lines instead of file lines (when wrapping)
@@ -450,8 +431,8 @@ let NERDTreeWinPos='right'
 
 
 " fuzzyfinder_textmate ********************************************************
-map ,f :FuzzyFinderFile<CR>
-map ,b :FuzzyFinderBuffer<CR>
+"map ,f :FuzzyFinderFile<CR>
+"map ,b :FuzzyFinderBuffer<CR>
 "let g:fuzzy_ignore = '.o;.obj;.bak;.exe;.pyc;.pyo;.DS_Store;.db'
 
 " autocomplpop ***************************************************************
@@ -487,6 +468,6 @@ map ,b :FuzzyFinderBuffer<CR>
 " -----------------------------------------------------------------------------  
 " |                               Host specific                               |
 " -----------------------------------------------------------------------------  
-if filereadable(expand("~/.vimrc.local"))
-  source ~/.vimrc.local
-endif
+" if filereadable(expand("~/.vimrc.local"))
+"   source ~/.vimrc.local
+" endif
