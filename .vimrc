@@ -176,7 +176,7 @@ set fillchars=fold:-
 " Use the cool tab complete menu
 " Ignore certain filetypes in listings
 set wildmenu
-set wildignore+=*.o,*.obj,.git,*.vtr,*.vtu,*.vtk,*.bmp,*.aux,*.pdf,*.ps,*~
+set wildignore+=*.o,*.obj,.git,*.vtr,*.vtu,*.vtk,*.bmp,*.aux,*.pdf,*.ps,*~,*.dvi,*.toc,*.bbl,*.blg
 
 " Set default filetype of tex documents to tex to ensure latex-suite is loaded
 let g:tex_flavor='latex'
